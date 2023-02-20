@@ -24,7 +24,8 @@ public class FactorialCalculationTest {
     @MethodSource("inputData")
     public void calculationTest(int num) {
         String expectedFactorial = String.valueOf(factorialCalculation(num));
-        String actualFactorial = given().baseUri("https://qainterview.pythonanywhere.com")
+        String actualFactorial = given()
+                .baseUri("https://qainterview.pythonanywhere.com")
                 .param("number", String.valueOf(num))
                 .when()
                 .post("/factorial")
