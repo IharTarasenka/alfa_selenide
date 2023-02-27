@@ -24,13 +24,6 @@ public class InputDataTypeTest extends BaseTest {
         };
     }
 
-    @BeforeEach
-    public void init() {
-        Configuration.startMaximized = true;
-        open("https://qainterview.pythonanywhere.com/");
-        mainPage = new MainPage();
-    }
-
     @ParameterizedTest
     @MethodSource("dataTypes")
     public void inputDataTypeValidation(String num) {
